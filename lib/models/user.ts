@@ -59,4 +59,4 @@ function initializeUserModel(sequelize_instance: Sequelize) {
 	);
 }
 
-export { User as default };
+export { User as default, initializeUserModel };
