@@ -10,12 +10,14 @@
 		"db:migrate": "npx sequelize-cli db:migrate"
 	},
 	"dependencies": {
+		"bcrypt": "^5.1.1",
 		"next": "14.2.7",
 		"react": "^18",
 		"react-dom": "^18",
 		"sequelize": "^6.37.3",
 		"sequelize-cli": "^6.6.2",
-		"sqlite3": "^5.1.7"
+		"sqlite3": "^5.1.7",
+		"zod": "^3.23.8"
 	},
 	"devDependencies": {
 		"@types/node": "^20",
