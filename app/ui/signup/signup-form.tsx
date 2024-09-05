@@ -64,7 +64,6 @@ export default function SignUpForm(props: SignUpFormProps) {
 			>
 				<div className="form-group form-header">
 					<h1 className="text-center text-2xl font-semibold text-gray-400">
-						{" "}
 						Sign Up
 					</h1>
 				</div>
