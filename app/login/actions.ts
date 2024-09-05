@@ -4,7 +4,7 @@ import { boolean, z } from "zod";
 import { User } from "@/lib/sequelize";
 import { createSession } from "@/lib/sessions";
 import { redirect } from "next/navigation";
-import bcrypt from "bcrypt";
+const bcrypt = require("bcrypt");
 
 export type State = {
 	errors?: {
