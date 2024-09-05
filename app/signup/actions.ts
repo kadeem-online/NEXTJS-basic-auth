@@ -1,7 +1,9 @@
 "use server";
 
 import { User } from "@/lib/sequelize";
+import { createSession } from "@/lib/sessions";
 import { hashPassword } from "@/lib/utils";
+import { redirect } from "next/navigation";
 import { z } from "zod";
 const bcrypt = require("bcrypt");
 
@@ -87,7 +89,12 @@ export async function signUpUser(
 
 	try {
 		const newUser = await INTERNAL_registerNewUser(name, email, password);
-	} catch (error) {}
+		createSession(newUser.id);
+	} catch (error) {
+		// Handle errors here
+	}
+
+	redirect("/profile");
 
 	return;
 }
