@@ -1,6 +1,7 @@
 import ProfileGreeting from "@/app/ui/profile/greeting";
 import ProfileGreetingSkeleton from "@/app/ui/profile/skeletons";
 import { Suspense } from "react";
+import UserDeletionForm from "../ui/profile/user-deletion-form";
 
 export default async function Page() {
 	return (
@@ -10,6 +11,8 @@ export default async function Page() {
 					<Suspense fallback={<ProfileGreetingSkeleton />}>
 						<ProfileGreeting />
 					</Suspense>
+
+					<UserDeletionForm />
 				</div>
 			</section>
 		</>
